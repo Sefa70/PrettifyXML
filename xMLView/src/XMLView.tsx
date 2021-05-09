@@ -1,11 +1,11 @@
 import { Component, ReactNode, createElement } from "react";
 import { HelloWorldSample } from "./components/HelloWorldSample";
 
-import { PrettifyXMLContainerProps } from "../typings/PrettifyXMLProps";
+import { XMLViewContainerProps } from "../typings/XMLViewProps";
 
-import "./ui/PrettifyXML.css";
+import "./ui/XMLView.css";
 
-export default class PrettifyXML extends Component<PrettifyXMLContainerProps> {
+export default class XMLView extends Component<XMLViewContainerProps> {
     render(): ReactNode {
         return <HelloWorldSample sampleText={this.props.sampleText ? this.props.sampleText : "World"} />;
     }

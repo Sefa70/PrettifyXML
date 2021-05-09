@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="timeseries.prettifyxml.PrettifyXML" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+<widget id="timeseries.xmlview.XMLView" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
         supportedPlatform="Web"
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Prettify XML</name>
+    <name>XMLView</name>
     <description>Pretty-print XML</description>
     <icon/>
     <properties>
@@ -11,6 +11,13 @@
             <property key="sampleText" type="string" required="false">
                 <caption>Default value</caption>
                 <description>Sample text input</description>
+            </property>
+            <property key="XMLInput" type="attribute" required="true">
+                <caption>XML Attribute</caption>
+                <description>Provivde string XML attribute</description>
+                <attributeTypes>
+                     <attributeType name="String" />
+                </attributeTypes>
             </property>
         </propertyGroup>
     </properties>

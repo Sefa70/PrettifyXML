@@ -1,11 +1,11 @@
 /**
- * This file was generated from PrettifyXML.xml
+ * This file was generated from XMLView.xml
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
 
-export interface PrettifyXMLContainerProps {
+export interface XMLViewContainerProps {
     name: string;
     class: string;
     style?: CSSProperties;
@@ -13,7 +13,7 @@ export interface PrettifyXMLContainerProps {
     sampleText: string;
 }
 
-export interface PrettifyXMLPreviewProps {
+export interface XMLViewPreviewProps {
     class: string;
     style: string;
     sampleText: string;

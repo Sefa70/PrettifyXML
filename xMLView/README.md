@@ -1,4 +1,4 @@
-## PrettifyXML
+## XMLView
 [Pretty-print XML]
 
 ## Features
