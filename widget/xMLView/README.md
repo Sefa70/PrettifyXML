@@ -1,5 +1,5 @@
 ## XMLView
-[Pretty-print XML]
+[Prettify XML]
 
 ## Features
 [feature highlights]

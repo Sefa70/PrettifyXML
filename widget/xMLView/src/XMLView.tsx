@@ -7,6 +7,6 @@ import "./ui/XMLView.css";
 
 export default class XMLView extends Component<XMLViewContainerProps> {
     render(): ReactNode {
-        return <HelloWorldSample sampleText={this.props.sampleText ? this.props.sampleText : "World"} />;
+        return <HelloWorldSample sampleText={this.props.sampleText ? this.props.sampleText : ""} />;
     }
 }

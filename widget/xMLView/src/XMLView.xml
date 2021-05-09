@@ -4,19 +4,19 @@
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>XMLView</name>
-    <description>Pretty-print XML</description>
+    <description>Prettify XML</description>
     <icon/>
     <properties>
         <propertyGroup caption="General">
             <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
+                <caption>Label</caption>
+                <description></description>
             </property>
             <property key="XMLInput" type="attribute" required="true">
                 <caption>XML Attribute</caption>
                 <description>Provivde string XML attribute</description>
                 <attributeTypes>
-                     <attributeType name="String" />
+                  <attributeType name="String" />
                 </attributeTypes>
             </property>
         </propertyGroup>

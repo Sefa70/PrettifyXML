@@ -4,6 +4,7 @@
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
+import { EditableValue } from "mendix";
 
 export interface XMLViewContainerProps {
     name: string;
@@ -11,10 +12,12 @@ export interface XMLViewContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     sampleText: string;
+    XMLInput: EditableValue<string>;
 }
 
 export interface XMLViewPreviewProps {
     class: string;
     style: string;
     sampleText: string;
+    XMLInput: string;
 }
