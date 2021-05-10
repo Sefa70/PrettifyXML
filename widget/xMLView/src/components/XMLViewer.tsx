@@ -1,13 +1,15 @@
 import { Component, createElement} from 'react'
 import XMLViewer from 'react-xml-viewer'
 
-const xml = '<hello>World</hello>'
+export interface XMLViewPreviewProps {
+ xml?: string;
+}
 
-export default class App extends Component {
+export default class App extends Component<XMLViewPreviewProps> {
   render () {
     return (
-      <div>
-        <XMLViewer xml={xml} />
+      <div className="xml">=
+        <XMLViewer xml={this.props.xml} />
       </div>
     )
   }

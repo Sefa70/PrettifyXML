@@ -12,12 +12,12 @@ export interface XMLViewContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     sampleText: string;
-    XMLInput: EditableValue<string>;
+    xml: EditableValue<string>;
 }
 
 export interface XMLViewPreviewProps {
     class: string;
     style: string;
     sampleText: string;
-    XMLInput: string;
+    xml: string;
 }

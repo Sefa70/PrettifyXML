@@ -12,7 +12,7 @@
                 <caption>Label</caption>
                 <description></description>
             </property>
-            <property key="XMLInput" type="attribute" required="true">
+            <property key="xml" type="attribute" required="true">
                 <caption>XML Attribute</caption>
                 <description>Provivde string XML attribute</description>
                 <attributeTypes>
