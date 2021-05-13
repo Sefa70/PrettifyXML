@@ -1,15 +1,15 @@
 {
-  "name": "xmlview",
-  "widgetName": "XMLView",
+  "name": "prettifyxml",
+  "widgetName": "PrettifyXML",
   "version": "1.0.0",
-  "description": "Prettify XML",
+  "description": "Pretty-print XML",
   "copyright": "TimeSeries 2021",
   "author": "Sefa Kucukdemirci",
   "engines": {
     "node": ">=12"
   },
   "config": {
-    "projectPath": "./tests/testProject/",
+    "projectPath": "../../",
     "mendixHost": "http://localhost:8080",
     "developmentPort": "3000"
   },

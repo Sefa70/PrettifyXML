@@ -1,23 +1,22 @@
 /**
- * This file was generated from XMLView.xml
+ * This file was generated from PrettifyXML.xml
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
 import { EditableValue } from "mendix";
 
-export interface XMLViewContainerProps {
+export interface PrettifyXMLContainerProps {
     name: string;
     class: string;
     style?: CSSProperties;
     tabIndex?: number;
-    sampleText: string;
-    xml: EditableValue<string>;
+    id: string;
+    textAttribute: EditableValue<string>;
 }
 
-export interface XMLViewPreviewProps {
+export interface PrettifyXMLPreviewProps {
     class: string;
     style: string;
-    sampleText: string;
-    xml: string;
+    textAttribute: string;
 }

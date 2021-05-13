@@ -1,5 +1,5 @@
-## XMLView
-[Prettify XML]
+## PrettifyXML
+[Pretty-print XML]
 
 ## Features
 [feature highlights]
