@@ -19,7 +19,11 @@ export default class Pretttify extends Component<PrettifyXMLContainerProps> {
                 "textColor": this.props.textColor,
                 "overflowBreak":this.props.overflowBreak
               }
-        return (<div>
+             const collapsible = {
+                "collapsible": this.props.collapsible
+        }
+
+        return (<div id="style">
         <XMLViewer
         xml={xml}
         theme={customTheme}
@@ -35,6 +39,9 @@ export default class Pretttify extends Component<PrettifyXMLContainerProps> {
         tagColor= {this.props.tagColor}
         textColor= {this.props.textColor}
         overflowBreak= {this.props.overflowBreak}
+        IndentSize = {this.props.IndentSize}
+        invalidXml = {this.props.invalidXml}
+        collapsible = {collapsible}
         />
         </div>);
         }

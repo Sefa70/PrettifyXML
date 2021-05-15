@@ -8,10 +8,10 @@
     <icon/>
   <properties>
         <propertyGroup caption="General">
-        <propertyGroup caption="Label">
-            <systemProperty key="Label" />
-        </propertyGroup>
-        <propertyGroup caption="Data source">
+            <propertyGroup caption="Label">
+                <systemProperty key="Label" />
+            </propertyGroup>
+            <propertyGroup caption="Data source">
             <property key="textAttribute" type="attribute">
                 <caption>Attribute (path)</caption>
                 <description/>
@@ -19,46 +19,55 @@
                     <attributeType name="String"/>
                 </attributeTypes>
             </property>
-        </propertyGroup>
-        <propertyGroup caption="Advanced">
-        <property key="IndentSize" type="integer" required="true" defaultValue="10">
-            <caption>Indent size</caption>
-            <description>The size of the indentation</description>
-        </property>
-        </propertyGroup>
-        <propertyGroup caption="Colors">
+            </propertyGroup>
+                <propertyGroup caption="Colors">
                 <property key="attributeKeyColor" type="string" required="false" defaultValue="#2a7ab0">
-                    <caption>attribute key color</caption>
-                    <description></description>
+                    <caption>Attribute key color</caption>
+                    <description/>
                 </property>
                 <property key="attributeValueColor" type="string" required="false" defaultValue="#008000">
-                    <caption>attribute value color</caption>
-                    <description></description>
+                    <caption>Attribute value color</caption>
+                    <description/>
                 </property>
                 <property key="cdataColor" type="string" required="false" defaultValue="#1D781D">
-                    <caption>cdataColor</caption>
-                    <description>set the cdata element color</description>
+                    <caption>Cdata color</caption>
+                       <description/>
                 </property>
                 <property key="commentColor" type="string" required="false" defaultValue="#aaa">
-                    <caption>comment color</caption>
-                    <description></description>
+                    <caption>Comment color</caption>
+                       <description/>
                 </property>
                 <property key="separatorColor" type="string" required="false" defaultValue="#333">
-                    <caption>separator color</caption>
-                    <description></description>
+                    <caption>Separator color</caption>
+                       <description/>
                 </property>
                 <property key="tagColor" type="string" required="false" defaultValue="#d43900">
-                    <caption>tag color</caption>
-                    <description></description>
+                    <caption>Tag color</caption>
+                       <description/>
                 </property>
                 <property key="textColor" type="string" required="false" defaultValue="#333">
-                    <caption>text color</caption>
-                    <description></description>
+                    <caption>Text color</caption>
+                       <description/>
                 </property>
-                <property key="overflowBreak" type="boolean" defaultValue="false">
-                    <caption>overflowBreak</caption>
+                </propertyGroup>
+              <propertyGroup caption="Advanced">
+                <property key="IndentSize" type="integer" required="true" defaultValue="2">
+                    <caption>Indent size</caption>
+                    <description>The size of the indentation</description>
+                </property>
+                <property key="invalidXml" type="string" required="false" defaultValue="No XML attribute found" multiline="false">
+                    <caption>Invalid XML message</caption>
+                    <description>When the xml is invalid, invalidXml will be returned. </description>
+                </property>
+                 <property key="overflowBreak" type="boolean" defaultValue="false">
+                    <caption>Overflow break</caption>
                     <description>adjust the xml to fit in the parent width without overflowing</description>
                 </property>
-            </propertyGroup>
+                <property key="collapsible" type="boolean" defaultValue="false">
+                    <caption>Collapsible</caption>
+                    <description>Allow collapse/expand tags by click on them When tag is collapsed its content and attributes are hidden. Only is shown Default: false</description>
+                </property>
+                </propertyGroup> 
+        </propertyGroup>
     </properties>
 </widget>

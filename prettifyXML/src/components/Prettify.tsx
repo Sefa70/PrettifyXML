@@ -17,30 +17,35 @@ export interface PrettifyProps {
     tagColor:string;
     textColor:string;
     overflowBreak:boolean;
-    XMLViewer (): void;
+    IndentSize: number | null;
+    invalidXml: string;
+    collapsible: boolean;
 }
 
 
 export class Prettify extends Component<PrettifyProps> {
         render(): ReactNode { XMLViewer
-        const className = classNames("form-control", this.props.className);
+        const className = classNames("style", this.props.className);
         return (
-        <div id="xml">
-        <XMLViewer textarea
+        <div id="style">
+        <XMLViewer textarea 
         accessKey="xml" 
         xml={this.props.xml} 
         className={className}
         style={this.props.style}
         tabIndex={this.props.tabIndex}
         disabled={this.props.disabled}
-        attributeKeyColor = {this.props.xml}
-        attributeValueColor = {this.props.xml}
-        cdataColor= {this.props.xml}
-        commentColor= {this.props.xml}
-        separatorColor= {this.props.xml}
-        tagColor= {this.props.xml}
-        textColor= {this.props.xml}
+        attributeKeyColor = {this.props.attributeKeyColor}
+        attributeValueColor = {this.props.attributeValueColor}
+        cdataColor= {this.props.cdataColor}
+        commentColor= {this.props.commentColor}
+        separatorColor= {this.props.separatorColor}
+        tagColor= {this.props.tagColor}
+        textColor= {this.props.textColor}
         overflowBreak= {this.props.overflowBreak}
+        IndentSize = {this.props.IndentSize} 
+        invalidXml = {this.props.invalidXml}
+        collapsible = {this.props.collapsible}
         />
         </div>)
     }
