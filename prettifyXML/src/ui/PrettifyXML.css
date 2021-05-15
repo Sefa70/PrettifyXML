@@ -2,5 +2,6 @@
 Place your custom CSS here
 */
 .note {
+    flex-basis: auto;
 }
 

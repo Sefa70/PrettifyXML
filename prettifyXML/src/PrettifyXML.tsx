@@ -1,26 +1,41 @@
 import { Component, ReactNode, createElement } from "react";
 import { PrettifyXMLContainerProps } from "../typings/PrettifyXMLProps";
-import { Prettify } from "./components/Prettify";
+import XMLViewer from 'react-xml-viewer';
+
 
 import "./ui/PrettifyXML.css";
 
 export default class Pretttify extends Component<PrettifyXMLContainerProps> {
-    private readonly onUpdateHandle = this.onUpdate.bind(this);
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        return <Prettify 
-        value={value}
+        
+        render(): ReactNode {
+        const xml = this.props.textAttribute.value || "";
+        const customTheme = {
+                "attributeKeyColor": this.props.attributeKeyColor,
+                "attributeValueColor": this.props.attributeValueColor,
+                "cdataColor":this.props.cdataColor,
+                "commentColor":this.props.commentColor,
+                "separatorColor": this.props.separatorColor,
+                "tagColor": this.props.tagColor,
+                "textColor": this.props.textColor,
+                "overflowBreak":this.props.overflowBreak
+              }
+        return (<div>
+        <XMLViewer
+        xml={xml}
+        theme={customTheme}
         style={this.props.style}
         className={this.props.class}
         tabIndex={this.props.tabIndex}
-        onUpdate={this.onUpdateHandle}
         disabled={this.props.textAttribute.readOnly}
-
-        />;
-    }
-    private onUpdate(value: string): void {
-        this.props.textAttribute.setValue(value);
-    }
+        attributeKeyColor = {this.props.attributeKeyColor}
+        attributeValueColor = {this.props.attributeValueColor}
+        cdataColor= {this.props.cdataColor}
+        commentColor= {this.props.commentColor}
+        separatorColor= {this.props.separatorColor}
+        tagColor= {this.props.tagColor}
+        textColor= {this.props.textColor}
+        overflowBreak= {this.props.overflowBreak}
+        />
+        </div>);
+        }
 }
-
-

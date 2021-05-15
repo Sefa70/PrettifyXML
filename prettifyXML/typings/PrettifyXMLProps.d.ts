@@ -13,10 +13,26 @@ export interface PrettifyXMLContainerProps {
     tabIndex?: number;
     id: string;
     textAttribute: EditableValue<string>;
+    attributeKeyColor: string;
+    attributeValueColor: string;
+    cdataColor: string;
+    commentColor: string;
+    separatorColor: string;
+    tagColor: string;
+    textColor: string;
+    overflowBreak: boolean;
 }
 
 export interface PrettifyXMLPreviewProps {
     class: string;
     style: string;
     textAttribute: string;
+    attributeKeyColor: string;
+    attributeValueColor: string;
+    cdataColor: string;
+    commentColor: string;
+    separatorColor: string;
+    tagColor: string;
+    textColor: string;
+    overflowBreak: boolean;
 }

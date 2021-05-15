@@ -13,16 +13,52 @@
         </propertyGroup>
         <propertyGroup caption="Data source">
             <property key="textAttribute" type="attribute">
-                <caption>XML attribute (path)</caption>
+                <caption>Attribute (path)</caption>
                 <description/>
                 <attributeTypes>
                     <attributeType name="String"/>
                 </attributeTypes>
             </property>
         </propertyGroup>
-        <propertyGroup caption="Editability">
-            <systemProperty key="Editability"/>
+        <propertyGroup caption="Advanced">
+        <property key="IndentSize" type="integer" required="true" defaultValue="10">
+            <caption>Indent size</caption>
+            <description>The size of the indentation</description>
+        </property>
         </propertyGroup>
-        </propertyGroup>
+        <propertyGroup caption="Colors">
+                <property key="attributeKeyColor" type="string" required="false" defaultValue="#2a7ab0">
+                    <caption>attribute key color</caption>
+                    <description></description>
+                </property>
+                <property key="attributeValueColor" type="string" required="false" defaultValue="#008000">
+                    <caption>attribute value color</caption>
+                    <description></description>
+                </property>
+                <property key="cdataColor" type="string" required="false" defaultValue="#1D781D">
+                    <caption>cdataColor</caption>
+                    <description>set the cdata element color</description>
+                </property>
+                <property key="commentColor" type="string" required="false" defaultValue="#aaa">
+                    <caption>comment color</caption>
+                    <description></description>
+                </property>
+                <property key="separatorColor" type="string" required="false" defaultValue="#333">
+                    <caption>separator color</caption>
+                    <description></description>
+                </property>
+                <property key="tagColor" type="string" required="false" defaultValue="#d43900">
+                    <caption>tag color</caption>
+                    <description></description>
+                </property>
+                <property key="textColor" type="string" required="false" defaultValue="#333">
+                    <caption>text color</caption>
+                    <description></description>
+                </property>
+                <property key="overflowBreak" type="boolean" defaultValue="false">
+                    <caption>overflowBreak</caption>
+                    <description>adjust the xml to fit in the parent width without overflowing</description>
+                </property>
+            </propertyGroup>
     </properties>
 </widget>

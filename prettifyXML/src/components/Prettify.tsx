@@ -1,39 +1,47 @@
-import { Component, ChangeEvent, CSSProperties, ReactNode, createElement } from "react";
+import { Component, CSSProperties, ReactNode, createElement } from "react";
 import classNames from "classnames";
 import XMLViewer from 'react-xml-viewer';
 
 export interface PrettifyProps {
-    value: string;
+    xml: string;
     className?: string;
     index?: number;
     style?: CSSProperties;
     tabIndex?: number;
-    onUpdate?: (value: string) => void;
     disabled?: boolean;
-    
+    attributeKeyColor: string;
+    attributeValueColor: string;
+    cdataColor: string;
+    commentColor:string;
+    separatorColor: string;
+    tagColor:string;
+    textColor:string;
+    overflowBreak:boolean;
+    XMLViewer (): void;
 }
 
+
 export class Prettify extends Component<PrettifyProps> {
-    private readonly handleChange = this.onChange.bind(this);
-    render(): ReactNode {
-        const className = classNames("textarea.form-control", this.props.className);
-        const textarea = document.getElementById("textAttribute");
+        render(): ReactNode { XMLViewer
+        const className = classNames("form-control", this.props.className);
         return (
-        <div>
-        <XMLViewer xml
-        accessKey="textAttribute" 
-        value={this.props.value} 
+        <div id="xml">
+        <XMLViewer textarea
+        accessKey="xml" 
+        xml={this.props.xml} 
         className={className}
         style={this.props.style}
         tabIndex={this.props.tabIndex}
-        onChange={this.handleChange}
         disabled={this.props.disabled}
-        textarea={textarea}/>
+        attributeKeyColor = {this.props.xml}
+        attributeValueColor = {this.props.xml}
+        cdataColor= {this.props.xml}
+        commentColor= {this.props.xml}
+        separatorColor= {this.props.xml}
+        tagColor= {this.props.xml}
+        textColor= {this.props.xml}
+        overflowBreak= {this.props.overflowBreak}
+        />
         </div>)
-    }
-    private onChange(event: ChangeEvent<HTMLTextAreaElement>): void {
-        if (this.props.onUpdate) {
-            this.props.onUpdate(event.target.value);
-        }
     }
 }
