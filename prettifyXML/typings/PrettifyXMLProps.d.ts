@@ -20,7 +20,7 @@ export interface PrettifyXMLContainerProps {
     separatorColor: string;
     tagColor: string;
     textColor: string;
-    IndentSize: number;
+    indentSize: number;
     invalidXml: string;
     overflowBreak: boolean;
     collapsible: boolean;
@@ -37,7 +37,7 @@ export interface PrettifyXMLPreviewProps {
     separatorColor: string;
     tagColor: string;
     textColor: string;
-    IndentSize: number | null;
+    indentSize: number | null;
     invalidXml: string;
     overflowBreak: boolean;
     collapsible: boolean;

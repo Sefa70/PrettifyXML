@@ -17,17 +17,16 @@ export interface PrettifyProps {
     tagColor:string;
     textColor:string;
     overflowBreak:boolean;
-    IndentSize: number | null;
+    indentSize: number;
     invalidXml: string;
     collapsible: boolean;
 }
-
 
 export class Prettify extends Component<PrettifyProps> {
         render(): ReactNode { XMLViewer
         const className = classNames("style", this.props.className);
         return (
-        <div id="style">
+        <div className="style">
         <XMLViewer textarea 
         accessKey="xml" 
         xml={this.props.xml} 
@@ -43,7 +42,7 @@ export class Prettify extends Component<PrettifyProps> {
         tagColor= {this.props.tagColor}
         textColor= {this.props.textColor}
         overflowBreak= {this.props.overflowBreak}
-        IndentSize = {this.props.IndentSize} 
+        indentSize = {this.props.indentSize} 
         invalidXml = {this.props.invalidXml}
         collapsible = {this.props.collapsible}
         />

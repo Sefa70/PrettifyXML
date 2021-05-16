@@ -51,13 +51,13 @@
                 </property>
                 </propertyGroup>
               <propertyGroup caption="Advanced">
-                <property key="IndentSize" type="integer" required="true" defaultValue="2">
+                <property key="indentSize" type="integer" required="true" defaultValue="2">
                     <caption>Indent size</caption>
                     <description>The size of the indentation</description>
                 </property>
                 <property key="invalidXml" type="string" required="false" defaultValue="No XML attribute found" multiline="false">
                     <caption>Invalid XML message</caption>
-                    <description>When the xml is invalid, invalidXml will be returned. </description>
+                    <description>When the xml is invalid, this message will be returned. </description>
                 </property>
                  <property key="overflowBreak" type="boolean" defaultValue="false">
                     <caption>Overflow break</caption>
