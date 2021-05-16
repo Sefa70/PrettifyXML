@@ -29,7 +29,8 @@ export default class Pretttify extends Component<PrettifyXMLContainerProps> {
         theme           = {customTheme}
         indentSize      = {this.props.indentSize}
         invalidXml      = {this.props.invalidXml}
-        collapsible     = {collapsible}style={this.props.style}
+        collapsible     = {collapsible}
+        style           = {this.props.style}
         className       = {this.props.class}
         tabIndex        = {this.props.tabIndex}
         disabled        = {this.props.textAttribute.readOnly}    
