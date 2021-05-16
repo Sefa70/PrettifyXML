@@ -22,15 +22,12 @@ export default class Pretttify extends Component<PrettifyXMLContainerProps> {
         const collapsible = {
         "collapsible"           :this.props.collapsible
         }
-        const indentSize = {
-        "indentSize"            :this.props.indentSize
-        }
-
-        return (<div className="style">
+  
+  return (<div className="style">
         <XMLViewer
         xml             = {xml}
         theme           = {customTheme}
-        IndentSize      = {indentSize}
+        indentSize      = {this.props.indentSize}
         invalidXml      = {this.props.invalidXml}
         collapsible     = {collapsible}style={this.props.style}
         className       = {this.props.class}
