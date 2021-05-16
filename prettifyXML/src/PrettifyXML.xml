@@ -65,7 +65,7 @@
                 </property>
                 <property key="collapsible" type="boolean" defaultValue="false">
                     <caption>Collapsible</caption>
-                    <description>Allow collapse/expand tags by click on them When tag is collapsed its content and attributes are hidden. Only is shown Default: false</description>
+                    <description>Allow collapse/expand tags by click on them When tag is collapsed its content and attributes are hidden.</description>
                 </property>
                 </propertyGroup> 
         </propertyGroup>
