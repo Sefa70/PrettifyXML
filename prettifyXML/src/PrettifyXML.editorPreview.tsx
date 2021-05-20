@@ -1,24 +1,45 @@
 import { Component, ReactNode, createElement } from "react";
-import { PrettifyXMLPreviewProps } from "../typings/PrettifyXMLProps";
+import { PrettifyXMLContainerProps } from "../typings/PrettifyXMLProps";
 import XMLViewer from 'react-xml-viewer';
 
 declare function require(name: string): string;
 
-export default class preview extends Component<PrettifyXMLPreviewProps> {
-    render(): ReactNode {
-         return <XMLViewer 
-         value={this.props.textAttribute} 
-         attributeKeyColor = {this.props.attributeKeyColor}
-         attributeValueColor = {this.props.attributeValueColor}
-         cdataColor= {this.props.cdataColor}
-         commentColor= {this.props.commentColor}
-         separatorColor= {this.props.separatorColor}
-         tagColor= {this.props.tagColor}
-         textColor= {this.props.textColor}
-         overflowBreak= {this.props.overflowBreak}/>;
-    }
+import "./ui/PrettifyXML.css";
+
+export default class preview extends Component<PrettifyXMLContainerProps> {
+        
+        render(): ReactNode {
+        const xml = this.props.textAttribute.value || "";
+        const customTheme = {
+        "attributeKeyColor"     :this.props.attributeKeyColor,
+        "attributeValueColor"   :this.props.attributeValueColor,
+        "cdataColor"            :this.props.cdataColor,
+        "commentColor"          :this.props.commentColor,
+        "separatorColor"        :this.props.separatorColor,
+        "tagColor"              :this.props.tagColor,
+        "textColor"             :this.props.textColor,
+        "overflowBreak"         :this.props.overflowBreak
+        }
+        const collapsible = {
+        "collapsible"           :this.props.collapsible
+        }
+  
+  return (<div className="style">
+        <XMLViewer
+        xml             = {xml}
+        theme           = {customTheme}
+        indentSize      = {this.props.indentSize}
+        invalidXml      = {this.props.invalidXml}
+        collapsible     = {collapsible}
+        style           = {this.props.style}
+        className       = {this.props.class}
+        tabIndex        = {this.props.tabIndex}
+        disabled        = {this.props.textAttribute.readOnly}    
+        />
+        </div>);
+        }
 }
 
-export function getPreviewCss(): string {
+export function getPreviewCss(): string { 
     return require("./ui/PrettifyXML.css");
 }

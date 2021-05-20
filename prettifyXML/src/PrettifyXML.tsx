@@ -1,8 +1,6 @@
 import { Component, ReactNode, createElement } from "react";
 import { PrettifyXMLContainerProps } from "../typings/PrettifyXMLProps";
 import XMLViewer from 'react-xml-viewer';
-
-
 import "./ui/PrettifyXML.css";
 
 export default class Pretttify extends Component<PrettifyXMLContainerProps> {
@@ -36,5 +34,5 @@ export default class Pretttify extends Component<PrettifyXMLContainerProps> {
         disabled        = {this.props.textAttribute.readOnly}    
         />
         </div>);
-        }
+        }  
 }
