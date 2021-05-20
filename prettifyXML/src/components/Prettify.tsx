@@ -23,7 +23,7 @@ export interface PrettifyProps {
 }
 
 export class Prettify extends Component<PrettifyProps> {
-        render(): ReactNode { XMLViewer
+        render(): ReactNode {
         const className = classNames("style", this.props.className);
         return (
         <div className="style">

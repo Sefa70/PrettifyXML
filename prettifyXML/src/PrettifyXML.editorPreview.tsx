@@ -1,15 +1,14 @@
 import { Component, ReactNode, createElement } from "react";
-import { PrettifyXMLContainerProps } from "../typings/PrettifyXMLProps";
+import { PrettifyXMLPreviewProps } from "../typings/PrettifyXMLProps";
 import XMLViewer from 'react-xml-viewer';
-
-declare function require(name: string): string;
-
 import "./ui/PrettifyXML.css";
 
-export default class preview extends Component<PrettifyXMLContainerProps> {
+declare function require(xml: string): string;
+
+export default class preview extends Component<PrettifyXMLPreviewProps> {
         
         render(): ReactNode {
-        const xml = this.props.textAttribute.value || "";
+        const xml = this.props.textAttribute || "";
         const customTheme = {
         "attributeKeyColor"     :this.props.attributeKeyColor,
         "attributeValueColor"   :this.props.attributeValueColor,
@@ -33,8 +32,7 @@ export default class preview extends Component<PrettifyXMLContainerProps> {
         collapsible     = {collapsible}
         style           = {this.props.style}
         className       = {this.props.class}
-        tabIndex        = {this.props.tabIndex}
-        disabled        = {this.props.textAttribute.readOnly}    
+        
         />
         </div>);
         }
