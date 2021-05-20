@@ -4,12 +4,12 @@ import "./ui/PrettifyXML.css";
 import XMLViewer from 'react-xml-viewer';
 
 
-declare function require(name: string): string;
+declare function require(xml: string): string;
 
 export class preview extends Component<PrettifyXMLPreviewProps> {
 	render(): ReactNode {
-		const xml = `[${this.props.textAttribute}]`;
-		return <div><XMLViewer xml={xml} /></div>;
+		const xml = "<Timeseries><Mendix>GoMakeIT</Mendix></Timeseries>";
+		return (<div><XMLViewer xml={xml} /></div>);
 	}
 }
 
