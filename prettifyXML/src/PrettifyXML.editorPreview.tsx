@@ -7,10 +7,9 @@ declare function require(xml: string): string;
 
 export class preview extends Component<PrettifyXMLPreviewProps> {
     render(): ReactNode {
-        const xml = "<Timeseries><Mendix>GoMakeIT</Mendix></Timeseries>";
         return (
             <div>
-                <XMLViewer xml={xml} />
+                <XMLViewer xml="<Timeseries><Mendix>GoMakeIT</Mendix></Timeseries>" />
             </div>
         );
     }

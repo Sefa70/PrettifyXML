@@ -4,7 +4,7 @@
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
-import { EditableValue } from "mendix";
+import { DynamicValue, EditableValue } from "mendix";
 
 export interface PrettifyXMLContainerProps {
     name: string;
@@ -21,7 +21,7 @@ export interface PrettifyXMLContainerProps {
     tagColor: string;
     textColor: string;
     indentSize: number;
-    invalidXml: string;
+    invalidXml: DynamicValue<string>;
     overflowBreak: boolean;
     collapsible: boolean;
 }

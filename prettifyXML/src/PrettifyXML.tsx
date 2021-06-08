@@ -16,9 +16,6 @@ export default class PrettifyXML extends Component<PrettifyXMLContainerProps> {
             textColor: this.props.textColor,
             overflowBreak: this.props.overflowBreak
         };
-        const collapsible = {
-            collapsible: this.props.collapsible
-        };
 
         return (
             <div className="style">
@@ -26,12 +23,11 @@ export default class PrettifyXML extends Component<PrettifyXMLContainerProps> {
                     xml={xml}
                     theme={customTheme}
                     indentSize={this.props.indentSize}
-                    invalidXml={this.props.invalidXml}
-                    collapsible={collapsible}
+                    invalidXml={this.props.invalidXml?.value}
+                    collapsible={this.props.collapsible}
                     style={this.props.style}
                     className={this.props.class}
                     tabIndex={this.props.tabIndex}
-                    disabled={this.props.textAttribute.readOnly}
                 />
             </div>
         );

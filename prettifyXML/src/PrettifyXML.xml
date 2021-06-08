@@ -4,7 +4,7 @@
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Prettify XML</name>
-    <description>Pretty-print XML</description>
+    <description>Prettify XML</description>
     <icon/>
   <properties>
         <propertyGroup caption="General">
@@ -51,21 +51,25 @@
                 </property>
                 </propertyGroup>
               <propertyGroup caption="Advanced">
-                <property key="indentSize" type="integer" required="true" defaultValue="10">
+                <property key="indentSize" type="integer" required="true" defaultValue="12">
                     <caption>Indent size</caption>
                     <description>The size of the indentation</description>
                 </property>
-                <property key="invalidXml" type="string" required="false" defaultValue="Invalid XML!" multiline="false">
+                <property key="invalidXml" type="textTemplate">
                     <caption>Invalid XML message</caption>
                     <description>When the xml attribute is invalid or empty, this message will be returned. </description>
+                    <translations>
+                            <translation lang="en_US">Invalid XML!</translation>
+                            <translation lang="nl_NL">Ongeldige XML!</translation>
+                    </translations>
                 </property>
                  <property key="overflowBreak" type="boolean" defaultValue="false">
                     <caption>Overflow break</caption>
-                    <description>adjust the xml to fit in the parent width without overflowing</description>
+                    <description>Adjust the xml to fit in the parent width without overflowing</description>
                 </property>
-                <property key="collapsible" type="boolean" defaultValue="false">
+                <property key="collapsible" type="boolean" defaultValue="true">
                     <caption>Collapsible</caption>
-                    <description>Allow collapse/expand tags by click on them When tag is collapsed its content and attributes are hidden.</description>
+                    <description>Allow collapse/expand tags by click on them. When tag is collapsed its content and attributes are hidden.</description>
                 </property>
                 </propertyGroup> 
         </propertyGroup>
